@@ -19,8 +19,8 @@ jobs:
       - name: Discord notification
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-          DISCORD_USERNAME: ${{ secrets.DISCORD_USERNAME_CHAMP }}
-          DISCORD_AVATAR: ${{ secrets.DISCORD_AVATAR_CHAMP }}
+          DISCORD_USERNAME: ${{ secrets.DISCORD_USERNAME_ABBVIE }}
+          DISCORD_AVATAR: ${{ secrets.DISCORD_AVATAR_ABBVIE }}
         uses: Ilshidur/action-discord@master
         with:
           args: "`AbbVie - YouTube`'\n'**${{steps.prepare.outputs.escaped_title}}**'\n'${{on.youtube.outputs.link}}"
